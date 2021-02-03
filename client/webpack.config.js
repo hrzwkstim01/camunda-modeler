@@ -119,7 +119,13 @@ module.exports = {
   ],
 
   // don't bundle shims for node globals
-  node: false,
+  node: { 
+    crypto: true,
+    stream: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   devServer: {
     writeToDisk: true
   },
